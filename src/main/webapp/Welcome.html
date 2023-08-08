@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Course Management</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    body {
+
+      margin: 0;
+
+      height: 100vh;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      background-image: url('/mvcApp/welcome_image.jpg');
+
+      background-size: cover;
+
+      background-position: center;
+
+    }
+
+ 
+
+    .container {
+
+      text-align: center;
+
+      padding: 30px;
+
+      background-color: rgba(255, 255, 255, 0.8);
+
+      border-radius: 10px;
+
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+      backdrop-filter: blur(10px);
+
+      backdrop-filter: contrast(1.5);
+
+      
+
+    }
+
+ 
+
+    h1 {
+
+      font-family: 'Montserrat', sans-serif;
+
+      font-weight: 700;
+
+      font-size: 36px;
+
+      margin-bottom: 20px;
+
+      color: #333;
+
+    }
+
+ 
+
+    .buttons {
+
+      margin-top: 20px;
+
+      padding: 0;
+
+      list-style-type: none;
+
+      display: flex;
+
+      justify-content: center;
+
+    }
+
+ 
+
+    li {
+
+      font-size: 25px;
+
+      width: 8em;
+
+      height: 2em;
+
+      text-align: center;
+
+      line-height: 2em;
+
+      font-family: sans-serif;
+
+      text-transform: capitalize;
+
+      position: relative;
+
+      transition: 0.5s;
+
+      margin: 0.8em;
+
+      cursor: pointer;
+
+    }
+
+ 
+
+    li::before,
+
+    li::after {
+
+      content: '';
+
+      position: absolute;
+
+      width: 0.6em;
+
+      height: 0.6em;
+
+      background-image: linear-gradient(135deg, #f45d9c, #6b67f1);
+
+      border-radius: 50%;
+
+      transition: 0.5s cubic-bezier(0.5, -0.5, 0.25, 1.5);
+
+      top: calc(50% - 0.6em / 2);
+
+    }
+
+ 
+
+    li::before {
+
+      left: 0;
+
+      z-index: -1;
+
+    }
+
+ 
+
+    li::after {
+
+      right: 0;
+
+      z-index: -2;
+
+    }
+
+ 
+
+    li:hover {
+
+      color: white;
+
+    }
+
+ 
+
+    li:hover::before,
+
+    li:hover::after {
+
+      width: 100%;
+
+      height: 100%;
+
+      border-radius: 0;
+
+      background-image: linear-gradient(135deg, #f9a825, #3cbae9);
+
+    }
+
+ 
+
+    li:hover::before {
+
+      top: 0;
+
+    }
+
+ 
+
+    li:hover::after {
+
+      right: -0.4em;
+
+      filter: brightness(0.8);
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>ByteMasters: Unleash Your Brillance!</h1>
+
+    <ul class="buttons">
+
+      <li id="adminButton">Admin</li>
+
+      <li id="professorButton">Professor</li>
+
+      <li id="studentButton">Student</li>
+
+    </ul>
+
+  </div>
+
+ 
+
+  <script>
+
+    // JavaScript code to handle list item clicks and redirection
+
+    const adminButton = document.getElementById('adminButton');
+
+    const professorButton = document.getElementById('professorButton');
+
+    const studentButton = document.getElementById('studentButton');
+
+ 
+
+    adminButton.addEventListener('click', () => {
+
+      window.location.href = 'AdminLogin.html';
+
+    });
+
+ 
+
+    professorButton.addEventListener('click', () => {
+
+      window.location.href = 'ProfLogin.html';
+
+    });
+
+ 
+
+    studentButton.addEventListener('click', () => {
+
+      window.location.href = 'StudLogin.html';
+
+    });
+
+  </script>
+
+</body>
+
+</html>
+
+ 

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html>
+
+ 
+
+<head>
+
+  <meta charset="ISO-8859-1">
+
+  <title>Change Password</title>
+
+  <style>
+
+    body {
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      justify-content: center;
+
+      height: 100vh;
+
+      margin: 0;
+
+      background-color: #f0f0f0;
+
+    }
+
+ 
+
+    .container {
+
+      text-align: center;
+
+    }
+
+ 
+
+    .neumorphic-form {
+
+      padding: 20px;
+
+      border-radius: 10px;
+
+      box-shadow: 6px 6px 12px #d9d9d9, -6px -6px 12px #ffffff;
+
+      background-color: #f0f0f0;
+
+      opacity: 0;
+
+      transform: translateY(20px);
+
+      animation: fadeAndSlide 1s ease-out forwards;
+
+      margin-bottom: 20px;
+
+    }
+
+ 
+
+    @keyframes fadeAndSlide {
+
+      0% {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+      }
+
+ 
+
+      100% {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+      }
+
+    }
+
+ 
+
+    label, input {
+
+      display: block;
+
+      margin: 10px 0;
+
+    }
+
+ 
+
+    input[type="password"] {
+
+      padding: 10px;
+
+      border: none;
+
+      border-radius: 5px;
+
+      box-shadow: 3px 3px 6px #d9d9d9, -3px -3px 6px #ffffff;
+
+    }
+
+ 
+
+    input[type="submit"] {
+
+      padding: 10px 20px;
+
+      background-color: #f0f0f0;
+
+      box-shadow: 6px 6px 12px #d9d9d9, -6px -6px 12px #ffffff;
+
+      border: none;
+
+      cursor: pointer;
+
+      text-decoration: none;
+
+      color: #333;
+
+      font-weight: bold;
+
+    }
+
+ 
+
+    .header {
+
+      font-size: 24px;
+
+      font-weight: bold;
+
+      margin-bottom: 20px;
+
+    }
+
+  </style>
+
+</head>
+
+ 
+
+<body>
+
+  <div class="container">
+
+    <div class="header">Change Password</div>
+
+    <form class="neumorphic-form" action="ProfChangePassController" method="post">
+
+      <label>Password</label>
+
+      <input type="password" name="ppass">
+
+      <label>New Password</label>
+
+      <input type="password" name="newpass">
+
+      <label>Confirm Password</label>
+
+      <input type="password" name="cpass">
+
+      <input type="submit" value="Submit">
+
+    </form>
+
+  </div>
+
+</body>
+
+ 
+
+</html>
