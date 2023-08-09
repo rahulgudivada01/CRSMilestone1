@@ -22,7 +22,9 @@ body {
 
     font-family: Arial, sans-serif;
 
-    background-color: #f4f4f4;
+    
+   background-image: url('https://static.tumblr.com/bcbf0b78bc5299592586b895192c3eda/sza0yfa/EOjp5i8lw/tumblr_static_tumblr_static_d1unhgq4n74s0gk0c00kccgk0_focused_v3.jpg');
+   		background-size: cover;
 
     margin: 0;
 

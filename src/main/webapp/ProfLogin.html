@@ -1,77 +1,329 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Professor Login</title>
-<style>
-       body {
-           background-image: url('/Course_management/login.image.jpg');
-           background-repeat: no-repeat;
-           background-position: center center;
-           background-attachment: fixed;
-           background-size: cover;
-           font-family: 'Inter UI', sans-serif;
-           margin: 0;
-           padding: 20px;
-           display: flex;
-           justify-content: center;
-           align-items: center;
-           height: 100vh;
-       }
 
-       .form-container {
-           background: #e2e2e5;
-           box-shadow: 0px 0px 40px 16px rgba(0, 0, 0, 0.22);
-           display: flex;
-           flex-direction: column;
-           padding: 40px;
-           width: 320px;
-           color: #474A59;
-       }
+	<meta charset="UTF-8">
 
-       label {
-           color: #c2c2c5;
-           font-size: 14px;
-           margin-top: 10px;
-           margin-bottom: 5px;
-       }
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-       input {
-           background: transparent;
-           border: 0;
-           color: #474A59;
-           font-size: 16px;
-           padding: 10px;
-           margin-bottom: 20px;
-           outline: none !important;
-           width: 100%;
-       }
+	<title>PROFESSOR LOGIN</title>
 
-       #submit {
-           background-color: #2D2F36;
-           border: none;
-           color: white;
-           font-size: 16px;
-           padding: 10px 20px;
-           cursor: pointer;
-       }
+	<link rel="stylesheet" href="style.css">
 
-       #submit:hover {
-           background-color: #232529;
-       }
-</style>
 </head>
+
+<style>
+	@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+
+	@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Ysabeau+SC:wght@600&display=swap');
+
+
+
+	* {
+
+		margin: 0;
+
+		padding: 0;
+
+		box-sizing: border-box;
+
+		font-family: "Open Sans", sans-serif;
+
+	}
+
+
+
+	body {
+
+		display: flex;
+
+		align-items: center;
+
+		justify-content: center;
+
+		min-height: 100vh;
+
+		width: 100%;
+
+		padding: 0 10px;
+
+	}
+
+
+
+	body::before {
+
+		content: "";
+
+		position: absolute;
+
+		width: 100%;
+
+		height: 100%;
+
+		background: url('/mvcApp/login.image.jpg'), #000;
+
+		background-position: center;
+
+		background-size: cover;
+
+	}
+
+
+
+	.wrapper {
+
+		width: 400px;
+
+		border-radius: 8px;
+
+		padding: 30px;
+
+		text-align: center;
+
+		border: 1px solid rgba(255, 255, 255, 0.5);
+
+		backdrop-filter: blur(9px);
+
+		-webkit-backdrop-filter: blur(9px);
+
+	}
+
+
+
+	form {
+
+		display: flex;
+
+		flex-direction: column;
+
+	}
+
+
+
+	h2 {
+
+		font-size: 2rem;
+
+		font-family: 'Lobster', cursive;
+
+		font-family: 'Ysabeau SC', sans-serif;
+
+		margin-bottom: 20px;
+
+		color: #fff;
+
+	}
+
+
+
+	.input-field {
+
+		position: relative;
+
+		border-bottom: 2px solid #ccc;
+
+		margin: 15px 0;
+
+	}
+
+
+
+	.input-field label {
+
+		position: absolute;
+
+		top: 50%;
+
+		left: 0;
+
+		transform: translateY(-50%);
+
+		color: #fff;
+
+		font-size: 16px;
+
+		pointer-events: none;
+
+		transition: 0.15s ease;
+
+	}
+
+
+
+	.input-field input {
+
+		width: 100%;
+
+		height: 40px;
+
+		background: transparent;
+
+		border: none;
+
+		outline: none;
+
+		font-size: 16px;
+
+		color: #fff;
+
+	}
+
+
+
+	.input-field input:focus~label,
+
+	.input-field input:valid~label {
+
+		font-size: 0.8rem;
+
+		top: 10px;
+
+		transform: translateY(-120%);
+
+	}
+
+
+
+	.forget {
+
+		display: flex;
+
+		align-items: center;
+
+		justify-content: space-between;
+
+		margin: 25px 0 35px 0;
+
+		color: #fff;
+
+	}
+
+
+
+	#remember {
+
+		accent-color: #fff;
+
+	}
+
+
+
+	.forget label {
+
+		display: flex;
+
+		align-items: center;
+
+	}
+
+
+
+	.forget label p {
+
+		margin-left: 8px;
+
+	}
+
+
+
+	.wrapper a {
+
+		color: #efefef;
+
+		text-decoration: none;
+
+	}
+
+
+
+	.wrapper a:hover {
+
+		text-decoration: underline;
+
+	}
+
+
+
+	button {
+
+		background: #fff;
+
+		color: #000;
+
+		font-weight: 600;
+
+		border: none;
+
+		padding: 12px 20px;
+
+		cursor: pointer;
+
+		border-radius: 3px;
+
+		font-size: 16px;
+
+		border: 2px solid transparent;
+
+		transition: 0.3s ease;
+
+	}
+
+
+
+	button:hover {
+
+		color: #fff;
+
+		border-color: #fff;
+
+		background: rgba(255, 255, 255, 0.15);
+
+	}
+
+
+
+	.register {
+
+		text-align: center;
+
+		margin-top: 30px;
+
+		color: #fff;
+
+	}
+</style>
+
 <body>
-<div class="form-container">
-<h3 class="login">Professor Login</h3>
-<form action="ProfLogin" method="post">
-<label for="pname">Username</label>
-<input type="text" id="pname" name="pname">
-<label for="ppass">Password</label>
-<input type="password" id="ppass" name="ppass">
-<input type="submit" id="submit" value="Login">
-</form>
-</div>
+	<div class="wrapper">
+
+    <h2>Professor Login</h2>
+
+    <form action="ProfLogin" method="post">
+
+        <div class="input-field">
+
+        <input type="text" id="pname" name="pname" required>
+
+        <label>Username</label>
+
+        </div>
+
+        <div class="input-field">
+
+        <input type="password" id="ppass" name="ppass" required>
+
+        <label>Password</label>
+
+        </div>
+
+        <button type="submit">Log In</button>
+
+    </form>
+
+  </div>
 </body>
+
 </html>
