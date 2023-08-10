@@ -28,6 +28,10 @@
 
         body{
 
+            background-color: white;
+
+            background-size: cover;
+            
             background-image: url('https://static.tumblr.com/bcbf0b78bc5299592586b895192c3eda/sza0yfa/EOjp5i8lw/tumblr_static_tumblr_static_d1unhgq4n74s0gk0c00kccgk0_focused_v3.jpg');
    			background-size: cover;
 
@@ -635,7 +639,7 @@
 
     <div class="button-container">
 
-        <a class="button" href="ChooseCourse.jsp">
+        <a class="button" href="ChooseCourse.html">
 
             <div class="button__line"></div>
 
@@ -676,6 +680,18 @@
             <div class="button__drow2"></div>
 
         </a>
+
+        <a class="button" href="ViewScoreCard.jsp">
+
+            <div class="button__line"></div>
+
+            <div class="button__line"></div>
+
+            <span class="button__text">Score Card</span>
+
+            <div class="button__drow1"></div>
+
+            <div class="button__drow2"></div>
 
         <a class="button" href="Logout">
 
