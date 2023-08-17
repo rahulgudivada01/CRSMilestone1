@@ -1,269 +1,352 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
 
 <head>
 
-  <meta charset="UTF-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Course Management</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
-  <style>
-
-    body {
-
-      margin: 0;
-
-      height: 100vh;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      background-image: url('/mvcApp/welcome_image.jpg');
-
-      background-size: cover;
-
-      background-position: center;
-
-    }
-
- 
-
-    .container {
-
-      text-align: center;
-
-      padding: 30px;
-
-      background-color: rgba(255, 255, 255, 0.8);
-
-      border-radius: 10px;
-
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-
-      backdrop-filter: blur(10px);
-
-      backdrop-filter: contrast(1.5);
-
-      
-
-    }
-
- 
-
-    h1 {
-
-      font-family: 'Montserrat', sans-serif;
-
-      font-weight: 700;
-
-      font-size: 36px;
-
-      margin-bottom: 20px;
-
-      color: #333;
-
-    }
-
- 
-
-    .buttons {
-
-      margin-top: 20px;
-
-      padding: 0;
-
-      list-style-type: none;
-
-      display: flex;
-
-      justify-content: center;
-
-    }
-
- 
-
-    li {
-
-      font-size: 25px;
-
-      width: 8em;
-
-      height: 2em;
-
-      text-align: center;
-
-      line-height: 2em;
-
-      font-family: sans-serif;
-
-      text-transform: capitalize;
-
-      position: relative;
-
-      transition: 0.5s;
-
-      margin: 0.8em;
-
-      cursor: pointer;
-
-    }
-
- 
-
-    li::before,
-
-    li::after {
-
-      content: '';
-
-      position: absolute;
-
-      width: 0.6em;
-
-      height: 0.6em;
-
-      background-image: linear-gradient(135deg, #f45d9c, #6b67f1);
-
-      border-radius: 50%;
-
-      transition: 0.5s cubic-bezier(0.5, -0.5, 0.25, 1.5);
-
-      top: calc(50% - 0.6em / 2);
-
-    }
-
- 
-
-    li::before {
-
-      left: 0;
-
-      z-index: -1;
-
-    }
-
- 
-
-    li::after {
-
-      right: 0;
-
-      z-index: -2;
-
-    }
-
- 
-
-    li:hover {
-
-      color: white;
-
-    }
-
- 
-
-    li:hover::before,
-
-    li:hover::after {
-
-      width: 100%;
-
-      height: 100%;
-
-      border-radius: 0;
-
-      background-image: linear-gradient(135deg, #f9a825, #3cbae9);
-
-    }
-
- 
-
-    li:hover::before {
-
-      top: 0;
-
-    }
-
- 
-
-    li:hover::after {
-
-      right: -0.4em;
-
-      filter: brightness(0.8);
-
-    }
-
-  </style>
-
+	<meta charset="ISO-8859-1">
+	<link rel="stylesheet" href="app.css">
+	<title>Welcome</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,600;0,700;1,600&family=Inknut+Antiqua:wght@600;700&family=Marcellus&family=Playfair+Display:wght@800;900&family=Prata&family=Rubik:wght@500;700&display=swap');	
+        body{
+            margin: 0;
+            background-image: url('/mvcApp/welcome_image.jpg');
+            background-size: cover;
+            background-position: center;
+            backdrop-filter: blur(5px);
+            font-family: Marcellus;
+            font-weight: 700;
+            text-align: center;
+        }
+        .imgContainer{
+            display: flex;
+            justify-content: center;
+            
+        }
+        #welcomeImg{
+            margin: 20px 30px;
+            border: 2px solid rgb(0, 0, 0);
+            border-radius: 10px;
+            transition: 0.5s;
+        }
+        #welcomeImg:hover{
+            box-shadow: 5px 5px rgb(255, 255, 255);
+        }
+        .galleryImg{
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .topnav {
+
+            overflow: hidden;
+            display: flex;
+            margin-top: 25px;
+        }
+
+        .navContainer {
+            font-family: Rubik;
+            font-weight: 900;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: space-around;
+            padding-bottom: 25px;
+            background-color: white;
+        }
+
+        .topnav a.active{
+            border: 2px solid black;
+        }
+
+        #logo {
+            margin-top: 25px;
+            float: left;
+            height: 50px;
+            margin-left: 30px;
+        }
+
+        /* Style the links inside the navigation bar */
+        .topnav a {
+            float: right;
+            background-color: white; 	
+            color : black;
+            padding: 14px 40px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 15px;
+            height: fit-content;
+        }
+
+        /* Change the color of links on hover */
+        .topnav a:hover {
+            /* border: 2px solid black; */
+        }
+
+        /* Add a color to the active/current link */
+        .topnav a.active {
+            border : 2px solid rgb(255, 255, 255);
+        }
+
+        .welcomeBackground {
+                 background-image: url('/mvcApp/welcome_image.jpg');
+                 background-size: cover;
+                 background-position: center;
+        }
+
+        .header {
+            text-align: center;
+            color: rgb(255, 255, 255);
+            margin: 40px 0px;
+            font-family: cormorant;
+            font-weight: 700;
+            font-size: 45px;
+        }
+
+        .list {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .listPoints {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0px;
+        }
+
+        .formContainer#inputForm {
+            margin-top: 50px;
+        }
+
+        th {
+            background-color: black;
+            color: white;
+        }
+
+        .navLink {
+            display: flex;
+            justify-content: center;
+            background-color: black;
+            padding: 20px 20px;
+        }
+
+        .Link {
+            display: flex;
+            justify-content: center;
+            color: white;
+            background-color: black;
+            padding: 20px 20px;
+        }
+
+        #inputForm {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .LinkButton {
+            display: flex;
+            justify-content: center;
+            color: #78290f;
+            background-color: white;
+            padding: 20px 30px;
+            border: 2px solid #78290f;
+            border-radius: 10px;
+            transition: 0.1s;
+        }
+
+        .LinkButton:hovers
+        {
+            box-shadow: 5px 5px black;
+        }
+        .LinkButton:active{
+            background-color:#78290f;
+            border : none;
+            color: white;
+        }
+        #LoginButton {
+            border-radius: 10px;
+            color: white;
+            font-family: Marcellus;
+            background-color: #78290f;
+            border: 0px solid white;
+            font-size: 20px;
+            padding: 15px 20px;
+            width: fit-content;
+            display: inline-block;
+            height: fit-content;
+            transition : 0.1s;
+        }
+        #LoginButton:hover {
+            background-color: #b08968;
+        }
+        #LoginButton:active{
+            background-color:#78290f;
+            color:white;
+            border : none;
+        }
+
+        h1 {
+            color: black;
+            text-align: center;
+        }
+
+        .input {
+            margin: 10px;
+            padding: 5px 5px;
+            height: 20px;
+            border: 2px solid #78290f;
+            color: black;
+            border-radius: 5px;
+        }
+
+        table {
+            border-spacing: 0 10px;
+            color: black;
+        }
+
+        .displayTable {
+            border-collapse: collapse;
+        }
+
+        .displayTableData {
+            width: 150px;
+            text-align: center;
+            border: 2px solid black;
+            padding: 5px
+        }
+
+        .message {
+            font-size: 25px;
+        }
+
+        .formContainer {
+            display: inline-block;
+            border: 2px solid #78290f;
+            padding: 50px;
+            background-color:#f5ebe0;
+            color: black;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 10px 10px #78290f;
+        }
+
+        #messageContainer {
+            margin-top: 25px 0px;
+        }
+
+        .td {
+            padding: 20px;
+        }
+
+        .buttonHolder {
+            margin-top: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .input#button {
+            padding: 20px 20px;
+            color: black;
+            background-color: white;
+            font-family: montserrat;
+            text-align: center;
+        }
+
+
+
+        .input:hover,
+        .input:focus,
+        .input:active {
+            border: 2px solid black;
+        }
+
+        .label {
+            font-size: 20px;
+            color: black;
+            float: left;
+        }
+
+        .button {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            transition: background-color 0.1s;
+        }
+
+        .space {
+            margin-top: 100px;
+        }
+
+        a {
+            text-decoration: none;
+            background-color: #F11A7B;
+            color: white;
+            border: none;
+        }
+
+        a {
+            color: white;
+        }
+        .navLink {
+            position: relative;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .navLink:hover {
+            transform: translateY(-5px);
+        }
+    </style>
 </head>
 
 <body>
 
-  <div class="container">
 
-    <h1>ByteMasters: Unleash Your Brillance!</h1>
-
-    <ul class="buttons">
-
-      <li id="adminButton">Admin</li>
-
-      <li id="professorButton">Professor</li>
-
-      <li id="studentButton">Student</li>
-
-    </ul>
-
-  </div>
-
- 
-
-  <script>
-
-    // JavaScript code to handle list item clicks and redirection
-
-    const adminButton = document.getElementById('adminButton');
-
-    const professorButton = document.getElementById('professorButton');
-
-    const studentButton = document.getElementById('studentButton');
-
- 
-
-    adminButton.addEventListener('click', () => {
-
-      window.location.href = 'AdminLogin.html';
-
-    });
-
- 
-
-    professorButton.addEventListener('click', () => {
-
-      window.location.href = 'ProfLogin.html';
-
-    });
-
- 
-
-    studentButton.addEventListener('click', () => {
-
-      window.location.href = 'StudLogin.html';
-
-    });
-
-  </script>
-
+	<div class="navContainer">
+		<img src="Logo.png" id="logo">
+		<div class="topnav">
+			<a class="active navLink" href="Welcome.html">HOME</a>
+			<a class="navLink" href="AdminLogin.html">ADMIN</a>
+            <a class="navLink" href="ProfLogin.html">PROFESSOR</a>
+			<a class="navLink" href="StudLogin.html">STUDENT</a>
+		</div>
+	</div>
+	<h1 class="header">ByteMasters: Unleash Your Brillance</h1>
+	<div class="imgContainer">
+		<table>
+			<tr>
+				<td>
+					<img id="welcomeImg" class="galleryImg" src="1.png">
+				</td>
+				<td>
+					<img id="welcomeImg" class="galleryImg" src="2.jpg">
+				</td>
+				<td>
+					<img id="welcomeImg" class="galleryImg" src="3.jpg">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img id="welcomeImg" class="galleryImg" src="4.png">
+				</td>
+				<td>
+					<img id="welcomeImg" class="galleryImg" src="5.jpg">
+				</td>
+				<td>
+					<img id="welcomeImg" class="galleryImg" src="6.jpg">
+				</td>
+			</tr>
+		</table>
+	</div>
 </body>
 
 </html>
-
- 

@@ -7,11 +7,6 @@
 <%@ page import="javax.servlet.http.*,javax.servlet.*"%>
 
 <!DOCTYPE html>
-
-<html>
-
-<!DOCTYPE html>
-
 <html>
 
 <head>
@@ -296,7 +291,7 @@
 
     <div class="button-container">
 
-      <a class="back-button" href="StudentHomePage.html">Back to Student Services</a>
+      <a class="back-button" href="StudHomePage.jsp">Back to Student Services</a>
 
     </div>
 

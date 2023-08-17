@@ -97,7 +97,7 @@
 
     text-align: center;
 
-    border: 1px solid #d9d9d9;
+    border: 3px solid #d9d9d9;
 
   }
 

@@ -87,7 +87,7 @@
 
             text-align: center;
 
-            border: 1px solid #d9d9d9;
+            border: 3px solid #d9d9d9;
 
         }
 
@@ -114,6 +114,18 @@
             margin-bottom: 20px;
 
         }
+        .view-button{
+      		margin-top:20px;
+      		padding:10px 20px;
+      		background-color: #f0f0f0;
+      		box-shadow: 6px 6px 12px #d9d9d9;
+      		border: none;
+      		cursor: pointer;
+      		text-decoration: none;
+      		color: #333;
+      		font-weight: bold;
+  		}
+        
 
     </style>
 

@@ -1,221 +1,100 @@
-
-
 <!DOCTYPE html>
-
 <html lang="en">
-
- 
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Course Management</title>
-
     <style>
    		@import url('https://rsms.me/inter/inter-ui.css');
-
         @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Ysabeau+SC:wght@600&display=swap');
-
          :root {
-
             /* color type A */
-
             --line_color: #555555;
-
             --back_color: #FFECF6;
-
         }
-
         body{
         background-image: url('https://static.tumblr.com/bcbf0b78bc5299592586b895192c3eda/sza0yfa/EOjp5i8lw/tumblr_static_tumblr_static_d1unhgq4n74s0gk0c00kccgk0_focused_v3.jpg');
    		background-size: cover;      
         }
-
         h1 {
-
             text-align: center;
-
-            color: white;
-
-            font-family: 'Lobster', cursive;
-
-            font-family: 'Ysabeau SC', sans-serif;
-
-        }
-
-        
-
-        
-
-        
-
-        .button-container {
-
-            width: 100%;
-
-            display: flex;
-
-            flex-wrap: wrap;
-
-            justify-content: center;
-
-            align-items: center;
-
-            gap: 20px;
-
-            height: 60vh;
-
-            /* adjust the height of then button*/
-
-        }
-
- 
-
-        .button {
-
-            position: relative;
-
-            z-index: 0;
-
-            width: 240px;
-
-            height: 56px;
-
-            text-decoration: none;
-
-            font-size: 14px;
-
-            font-weight: bold;
-
             color: black;
-
-            letter-spacing: 2px;
-
-            transition: all .3s ease;
-
+            font-family: 'Lobster', cursive;
+            font-family: 'Ysabeau SC', sans-serif;
+        }
+        .button-container {
+            width: 100%;
             display: flex;
-
-            align-items: center;
-
+            flex-wrap: wrap;
             justify-content: center;
-
+            align-items: center;
+            gap: 20px;
+            height: 60vh;
+            /* adjust the height of then button*/
         }
-
- 
-
+        .button {
+            position: relative;
+            z-index: 0;
+            width: 240px;
+            height: 56px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            color: black;
+            letter-spacing: 2px;
+            transition: all .3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
         .button::before,
-
         .button::after,
-
         .button__text::before,
-
         .button__text::after {
-
             content: '';
-
             position: absolute;
-
             height: 3px;
-
             border-radius: 2px;
-
             background: black;
-
             transition: all .5s ease;
-
         }
-
- 
-
         .button::before {
-
             top: 0;
-
             left: 54px;
-
             width: calc(100% - 56px * 2 - 16px);
-
         }
-
- 
-
         .button::after {
-
             top: 0;
-
             right: 54px;
-
             width: 8px;
-
         }
-
- 
-
         .button__text::before {
-
             bottom: 0;
-
             right: 54px;
-
             width: calc(100% - 56px * 2 - 16px);
-
         }
-
- 
-
         .button__text::after {
-
             bottom: 0;
-
             left: 54px;
-
             width: 8px;
-
         }
-
- 
-
         .button__line {
-
             position: absolute;
-
             top: 0;
-
             width: 56px;
-
             height: 100%;
-
             overflow: hidden;
-
         }
-
- 
-
         .button__line::before {
-
             content: '';
-
             position: absolute;
-
             top: 0;
-
             width: 150%;
-
             height: 100%;
-
             box-sizing: border-box;
-
             border-radius: 300px;
-
             border: solid 3px black;
-
-        }
-
- 
-
+        } 
         .button__line:nth-child(1),
 
         .button__line:nth-child(1)::before {
@@ -766,7 +645,7 @@
 
             <div class="button__line"></div>
 
-            <span class="button__text">view All Users</span>
+            <span class="button__text">View All Users</span>
 
             <div class="button__drow1"></div>
 

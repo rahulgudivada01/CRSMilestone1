@@ -15,5 +15,4 @@ public class Logout extends HttpServlet {
 		session.invalidate();
 		resp.sendRedirect("Welcome.html");
 		}
-
 }

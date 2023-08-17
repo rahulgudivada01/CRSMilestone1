@@ -639,7 +639,7 @@
 
     <div class="button-container">
 
-        <a class="button" href="ChooseCourse.html">
+        <a class="button" href="ChooseCourse.jsp">
 
             <div class="button__line"></div>
 
